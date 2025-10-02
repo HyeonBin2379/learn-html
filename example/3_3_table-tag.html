@@ -8,6 +8,7 @@
     <style>
       table {
         border: 1px solid darkslategray;
+        /*  */
         border-collapse: collapse;
       }
       th,
@@ -51,6 +52,8 @@
       <caption>
         학급 점수
       </caption>
+
+      <!-- <colgroup>: 테이블의 컬럼을 그룹화하기 위한 시멘틱 태그 -->
       <colgroup>
         <col class="col0" />
         <col class="col1" />
@@ -61,6 +64,7 @@
       </colgroup>
       <thead>
         <tr>
+          <!-- <th>: 테이블의 각 컬렴명을 표기 -->
           <th>반</th>
           <th>이름</th>
           <th>국어</th>
@@ -71,6 +75,7 @@
       </thead>
       <tbody>
         <tr>
+          <!-- rowspan 속성값: 합친 행의 개수 -->
           <td rowspan="2">1반</td>
           <td>홍길동</td>
           <td>90</td>
@@ -88,6 +93,7 @@
       </tbody>
       <tfoot>
         <tr>
+          <!-- colspan 속성값: 합친 열의 개수 -->
           <td colspan="2">평균</td>
           <td>87.5</td>
           <td>90.5</td>
