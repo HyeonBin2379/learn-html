@@ -1,0 +1,16 @@
+.container {
+  width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#title {
+  color: white;
+  background-color: darkblue;
+  display: inline-block;
+}
+
+#emphasize {
+  color: red;
+  font-weight: bold;
+}

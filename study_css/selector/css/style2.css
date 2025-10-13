@@ -1,0 +1,13 @@
+/* div p {
+  color: red;
+} */
+
+/* 첫번째 div의 자식 p */
+.my-p1 {
+  color : red;
+}
+
+.my-p2 {
+  color: greenyellow;
+  background-color: aquamarine;
+}
