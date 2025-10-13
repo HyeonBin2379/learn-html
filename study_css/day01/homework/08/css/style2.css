@@ -1,0 +1,52 @@
+a {
+  text-decoration: none;
+  color: #222;
+}
+#travel {
+  width: 1200px;
+  margin: 0 auto;
+}
+.title-text {
+  /* 카드 제목 가운데 정렬 */
+  text-align: center;
+}
+.title-text > h2 {
+  font-size: 2.5em;
+  color: #919191;
+}
+.title-text > p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+.travel-list {
+  padding-top: 20px;
+
+}
+
+.travel-card {
+  /* 카드의 너비, 높이 */
+  width: 250px;
+  height: 340px;
+
+  /* 카드 테두리 표시 & 모서리는 둥글게 */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  float: inline-end;
+  margin-right: 20px;
+  padding: 10px;
+  
+  /* 카드제목, 내용 모두 가운데정렬하기 위해 .travel-card에서 text-align 속성 사용 */
+  text-align: center;
+}
+
+.travel-card img {
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+
+  /* 카드 이미지 원형으로 바꾸기 */
+  border-radius: 100%;
+}
+.travel-card p {
+  font-size: 16px;
+}

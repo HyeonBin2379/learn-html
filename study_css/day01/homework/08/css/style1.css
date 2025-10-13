@@ -1,0 +1,15 @@
+#container {
+  width: 350px;
+  margin: 30px auto;
+}
+
+img {
+  /* 이미지 테두리에 실선 표시 */
+  border: 1px solid #ccc;
+
+  /* 이미지 테두리를 원형으로 변경 */
+  border-radius: 100%;
+
+  /* 이미지 주변 그림자 효과: 너비, 높이, 흐림 정도, 번짐 정도, 그림자 색상 순으로 기입 */
+  box-shadow: 5px 5px 30px 2px #000;
+}

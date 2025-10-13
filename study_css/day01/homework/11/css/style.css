@@ -1,0 +1,26 @@
+@media (min-width: 1025px) {
+  .container {
+    /* 한 줄에 최대 3개의 사진을 일렬로 나열 */
+    flex-basis: 33%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    /* 한 줄에 최대 2개의 사진을 일렬로 나열 */
+    flex-basis: 50%;
+  }
+}
+
+/* 이미지 스타일링 */
+.pic img {
+  width: 100%; /* 이미지가 .pic 에 가득차도록 */
+  height: auto; /* 이미지의 비율을 유지 */
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}

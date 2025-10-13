@@ -1,0 +1,19 @@
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* 너비 768px 이상, 1024px 미만이면 배경은 회색, 글자색은 흰색 */
+  body {
+    background-color: gray;
+  }
+  h1 {
+    color: white;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  font-size: 4rem;
+}

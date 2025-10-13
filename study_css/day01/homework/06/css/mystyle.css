@@ -1,0 +1,16 @@
+/* quiz-1.html에 적용할 css */
+h1 {
+  display: inline-block;
+  font-size: 1.4em;
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+}
+ul {
+  list-style: none;
+}
+li {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: blue;
+}
