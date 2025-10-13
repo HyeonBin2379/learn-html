@@ -1,0 +1,28 @@
+html, body {
+  /* display: flex; */
+  /* 너비를 기준으로 정렬 */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+
+  /* 주축을 세로방향으로 변경함 */
+  /* justify-content: center; */
+  justify-content: flex-start;
+}
+
+/* 공간에 요소를 맞추어 배치 */
+div {
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+}
+
+#second {
+  background-color: seagreen;
+}

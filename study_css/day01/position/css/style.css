@@ -1,0 +1,26 @@
+/* 너비 1280px 이하에서는 배경이 pink, 
+   너비 600px 이하 화면은 배경이 green */
+@media (max-width : 1280px) {
+  body {
+    background-color: pink;
+  }
+}
+
+@media (max-width : 600px) {
+  body {
+    background-color: greenyellow;
+  }
+}
+
+
+h1 {
+  border-bottom: 2px dotted black;
+  padding: 10px;
+}
+
+span {
+  border : 3px dotted red;
+  /* block 레벨을 inline 레벨로 바꾸거나, inline 레벨을 block 레벨로 변경 */
+  display: inline;
+  padding: 5px;
+}
