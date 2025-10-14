@@ -68,7 +68,7 @@ nav {
 
 #topMenu > li > a:hover {
   color: #000;
-  text-shadow: 0 1px #07c;
+  text-shadow: 0 -1px #07c;
 }
 
 #topMenu > li > a > span {
@@ -86,6 +86,7 @@ nav {
 
 #topMenu > li:hover > ul {
   display: block;
+  z-index: 10;
 }
 
 #topMenu > li > ul > li {
@@ -227,7 +228,7 @@ button:focus {
   float: right;
   width: 600px;
   height: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 #links ul {
