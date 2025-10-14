@@ -1,1 +1,60 @@
 @import './global.css';
+
+html,
+body {
+  /* overflow: html과 css를 요소 영역에 맞추는 속성 */
+  overflow: hidden;
+}
+
+.login-title {
+  text-align: center;
+}
+
+.login-title_maintext {
+  font-size: 2rem;
+  color: var(--purple);
+}
+
+.login-title_subtext {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+.login-form {
+  /* display 속성을 flex로 변경하고, 위에서 아래로 나열되도록 변경*/
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+
+.login-form input {
+  padding: 15px 0;
+  margin: 0 10px;
+  background-color: var(--background-purple);
+  font-size: 1.5rem;
+}
+
+/* 태그의 type 속성값을 사용하여 요소에 접근 가능 */
+.login-form input[type='submit'] {
+  color: white;
+  background-color: var(--darkpurple);
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+
+/* 로그인 버튼 클릭 시 적용될 시각적 효과 설정 */
+.login-form input[type='submit']:active {
+  background-color: var(--purple);
+}
+
+/* 아이디, 비밀번호 입력란에 밑줄 */
+.login-form input:not([type='submit']) {
+  color: white;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* 로그인 창에서 ID/비밀번호 입력 중임을 나타내기 위한 시각적 효과 부여 */
+.login-form input:focus {
+  border-color: white;
+}

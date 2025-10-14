@@ -1,14 +1,23 @@
-/* 웹페이지 폰트 지정 */
+/* 웹페이지 폰트 지정 & 모든 요소 초기화*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import './reset.css';
+@import './variable.css';
 
+/* 공통 폰트 및 배경색 지정 */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #120522;
+  background-color: var(--background-purple);
   color: white;
 }
 
+/* 모든 요소를 화면 안에 포함하여 렌더링(즉, 요소가 웹 화면을 벗어나는 것을 방지) */
 * {
-  /* 모든 요소를 화면 안에 포함하여 렌더링 */
   box-sizing: border-box;
+}
+
+/* 로그인 창 속성 */
+input {
+  border: none;
+  outline: none;
+  appearance: none;
 }
