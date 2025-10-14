@@ -1,5 +1,9 @@
 /* 웹페이지 폰트 지정 & 모든 요소 초기화*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 기본 아이콘을 가져오기 위한 주소: global.css에 링크를 import -> span 태그만 복사/붙여넣기만 하면 됨*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 @import './reset.css';
 @import './variable.css';
 
@@ -20,4 +24,16 @@ input {
   border: none;
   outline: none;
   appearance: none;
+}
+
+/* 요소의 중앙 정렬 */
+.display-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 요소의 상대적인 위치 조정 */
+.display-relative {
+  position: relative;
 }
