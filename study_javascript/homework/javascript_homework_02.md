@@ -160,7 +160,8 @@ console.log(add5(2));
 
 ```javascript
 function counter(){
-  // 함수 counter()의 지역변수 num은 함수 외부에 노출되지 않음 -> 정보은닉
+  // 함수 counter()의 지역변수 num은 절대 외부에 노출되지 않음 -> 정보은닉
+  // 클로저의 입장에서, 상위 스코프의 지역변수는 일종의 전역변수처럼 사용됨
   let num = 0;
 
   // 클로저에 해당: 외부에서 선언된 num의 값을 기억하고 사용
