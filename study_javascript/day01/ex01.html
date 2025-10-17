@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">눌러보세요</button>
+    <p id="text">안녕하세요</p>
+    <script>
+      // html 문서의 <button>, <p> 태그에 관한 DOM 요소를 가져옴
+      const button = document.getElementById('btn');
+      const text = document.getElementById('text');
+
+      // Event-Driven: eventListener를 통해, 이벤트 발생 시 특정한 작업을 처리하도록 지정
+      // 버튼 클릭 시, 웹 페이지에서 출력할 <p> 태그 내부의 텍스트를 변경하는 이벤트 리스너를 추가
+      // HTML 파일 자체를 수정하지 않고, 브라우저 메모리상의 DOM 객체를 실시간으로 조작
+      button.addEventListener('click', () => {
+        text.textContent = 'DOM을 통해 바뀌었어요.';
+      });
+    </script>
+  </body>
+</html>
