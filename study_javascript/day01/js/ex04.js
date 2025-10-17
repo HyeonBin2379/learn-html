@@ -5,8 +5,8 @@ window.onload = function () {
     const header = headers[i];
     header.style.color = 'orange';
     header.style.backgroundColor = 'green';
-
-    // 문서 객체 내부의 문자를 조작할 때 사용하는 속성
-    header.innerHTML = 'From JavaScript';
   }
+
+  // 문서 객체 내부의 문자를 조작할 때 사용하는 속성
+  header.innerHTML = 'From JavaScript';
 };
