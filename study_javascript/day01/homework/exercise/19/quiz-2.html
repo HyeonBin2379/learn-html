@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 2</title>
+    <link rel="stylesheet" href="css/quiz-2.css" />
+  </head>
+  <body>
+    <form action="">
+      <input type="text" id="rowCount" value="1" />행
+      <input type="text" id="colCount" value="1" />열
+      <button type="submit">작성</button>
+    </form>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('button');
+        button.onclick = function (event) {
+          event.preventDefault();
+          drawTable();
+        };
+      });
+
+      function drawTable() {
+        const rowCount = document.getElementById('rowCount').value;
+        const colCount = document.getElementById('colCount').value;
+
+        const table = document.createElement('table');
+        for (let i = 0; i < rowCount; i++) {
+          const newRow = document.createElement('tr');
+          for (let j = 0; j < colCount; j++) {
+            const newCell = document.createElement('td');
+            const newText = document.createTextNode(`${i}, ${j}`);
+
+            newCell.appendChild(newText);
+            newRow.appendChild(newCell);
+          }
+          table.appendChild(newRow);
+        }
+
+        document.body.appendChild(table);
+      }
+    </script>
+  </body>
+</html>
