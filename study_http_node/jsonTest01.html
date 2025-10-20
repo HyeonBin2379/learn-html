@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 직렬화할 객체
+      const obj = {
+        name: 'HYUN',
+        age: 30,
+        alive: true,
+        hobby: ['programming', 'music'],
+      };
+
+      // 2-1. 객체 -> JSON (serializing)
+      // 자바스크립트에서의 객체와는 달리, JSON에서는 key값이 문자열
+      const json = JSON.stringify(obj); // 들여쓰기 적용
+      console.log(json);
+
+
+      // 2-2. JSON -> 객체(deserializing)
+      const parsed1 = JSON.parse(json);
+      console.log(typeof parsed1, parsed1);
+
+
+      // 객체를 JSON으로 직렬화하면 객체는 string 타입으로 변환된다.
+      const prettyJSON = JSON.stringify(obj, null, 2); // 들여쓰기 적용
+      console.log(typeof prettyJSON, prettyJSON);
+
+      // 3. 객체에 필터를 적용하여 JSON으로 변환
+      const strFilteredJSON = JSON.stringify(obj, filter, 2);
+      console.log(typeof strFilteredJSON, strFilteredJSON);
+
+      // JSON.stringify(obj, replacer, space) 에서 replacer 메서드 정의
+      function filter(key, value) {
+        // undefined 는 반환 X -> 특정 타입을 값으로 갖는 속성은 반환하지 않도록 필터링
+        return typeof value === 'number' ? undefined : value;
+      }
+
+      // 4. 객체에 관한 배열을 JSON으로 직렬화
+      const todos = [
+        { id: 1, content: 'HTML', complete: false },
+        { id: 2, content: 'JavaScript', complete: true },
+        { id: 3, content: 'Ajax', complete: false },
+      ];
+
+      const json1 = JSON.stringify(todos, null, 2);
+      console.log(typeof json1, json1);
+    </script>
+  </body>
+</html>
