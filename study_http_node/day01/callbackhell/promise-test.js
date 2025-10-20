@@ -41,7 +41,7 @@ function getResult(user) {
 // 프로미스 실행용 함수
 function registerByPromise(user) {
   // then()을 사용한 메서드 체이닝 방식을 통해 비동기 콜백 함수들을 지정한 순서대로 처리
-  // 함수 saveDB 자체는 then() 호출 불가: saveDB의 반환값인 promise 객체에 의해 then()이 호출된 것
+  // 함수 saveDB 자체는 then() 호출 불가: saveDB에서 promise 객체를 반환하기 전에 then()이 호출된 것
   const result = saveDB(user).then(sendEmail).then(getResult);
   
   // promise 객체로 실행된 콜백함수들의 실행이 완료되기 전까지는 pending된 상태
