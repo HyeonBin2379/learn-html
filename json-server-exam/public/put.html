@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre></pre>
+    <script>
+      // HTTP 요청 초기화
+      const xhr = new XMLHttpRequest();
+
+      // todos 리소스에서 id를 제외한 todo의 데이터를 수정
+      xhr.open('PUT', '/todos/5');
+
+      // 요청을 담을 MIME 타입(생성해서 전달할 데이터의 타입)을 지정
+      xhr.setRequestHeader('content-type', 'application/json');
+
+      // HTTP 요청 전송: 보내야 할 객체를 인자로 전달
+      xhr.send(JSON.stringify({ id: 5, content: 'React', complete: true }));
+
+      // xhr.onload 이벤트 발생(요청 성공/실패) 시 처리할 작업을 지정
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          document.querySelector('pre').textContent = xhr.response;
+        } else {
+          console.error('Error', xhr.status, xhr.statusText);
+        }
+      };
+    </script>
+  </body>
+</html>
